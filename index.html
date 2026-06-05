@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>My card</title>
@@ -16,7 +17,7 @@
                 display: grid;
                 place-content: center;
              }
-             div {
+             .card {
                  background-color: blueviolet;
                  width: 400px;
                  text-align: center;
@@ -38,39 +39,49 @@
                 background-color: blanchedalmond;
              }
              p {
-                 margin: 20px 10px;
+                 margin: 20px 0px;
                  padding: 10px;
                  border-radius: 10px;
                  background-color: beige;
                  border: 2px solid black;
              }
-             a {
+
+             /* 1. BUTTONS KO EK LINE ME LANE KE LIYE CONTAINER CSS */
+             .button-group {
+                display: flex;
+                justify-content: center;
+                gap: 10px;          /* Har button ke beech ka gap */
+                flex-wrap: wrap;    /* Agar jagah kam ho to automatic niche line me aane ke liye */
+                margin-top: 20px;
+             }
+
+             /* 2. HAR EK BUTTON KA SAHI LOOK */
+             .button-group a {
+                display: inline-block; /* Ise jodne se padding aur margin sahi kaam karega */
                 background-color: aquamarine;
                 color: black;
-                margin: 20px;
-                padding: 10px;
+                padding: 10px 15px;    /* Button ke andar ka space */
                 text-decoration: none;
-                font-size: 20px;
+                font-size: 18px;       /* Size halka chota kiya taaki 400px box me fit aaye */
                 border-radius: 5px;
+                border: 1px solid black;
              }
         </style>
     </head>
 
     <body>
-        <div>
+        <!-- Card ka main div -->
+        <div class="card">
             <img src="image.png" alt="Mera image">
             <h1>Collegebuddy is live</h1>
             <p>I believe in hard work, discipline, and positive thinking. My goal is to become successful and make my parents proud. </p> 
 
-              <a href="tel:7319767700">Call</a>            
-              <a href="https://wa.me/+7319767700">Whatsaap</a> 
-              <a href="mailto:kumariannu098@gmail.com">Email</a>
-            
-            
-
-                
+            <!-- NAYA BADLAV: Teeno buttons ko is div ke andar dala gaya hai -->
+            <div class="button-group">
+                <a href="tel:7319767700">Call</a>            
+                <a href="https://wa.me/+7319767700">WhatsApp</a> 
+                <a href="mailto:kumariannuu098@gmail.com">Email</a>
+            </div>
         </div>
     </body>
-
-
 </html>
